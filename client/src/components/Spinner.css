@@ -1,0 +1,51 @@
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    animation: color-change 1.4s infinite linear, bounce 1.4s infinite ease-in-out;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #007bff;
+    }
+
+    33% {
+        background-color: #ff6347;
+    }
+
+    66% {
+        background-color: #32cd32;
+    }
+
+    100% {
+        background-color: #007bff;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
