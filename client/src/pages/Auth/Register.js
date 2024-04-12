@@ -29,7 +29,6 @@ const Register = () => {
                 phone,
                 address,
                 answer,
-
             });
             if (res && res.data.success) {
                 toast.success(res.data && res.data.message);
@@ -107,7 +106,7 @@ const Register = () => {
                             placeholder="Enter Your Address"
                         />
                     </div>
-                    {/* <div className="mb-3">
+                    <div className="mb-3">
                         <label htmlFor="answer"><strong>Security Question</strong><span className="required">*</span></label>
                         <input
                             type="text"
@@ -117,7 +116,7 @@ const Register = () => {
                             id="answer"
                             placeholder="What is your childhood NickName?"
                         />
-                    </div> */}
+                    </div>
                     <button type="submit" className="btn btn-primary">
                         REGISTER
                     </button>

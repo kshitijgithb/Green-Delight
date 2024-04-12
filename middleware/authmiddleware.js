@@ -11,6 +11,7 @@ export const requireSignIn = async (req, res, next) => {
     req.user = decode;
     next();
   } catch (error) {
+    // console.log("hi");
     console.log(error);
   }
 };
@@ -27,6 +28,7 @@ export const isAdmin = async (req, res, next) => {
         }
         next();
     } catch (error) {
+      // console.log("hi2");
         console.error("Error in isAdmin middleware:", error);
         res.status(500).send({ success: false, message: "Internal Server Error" });
     }
