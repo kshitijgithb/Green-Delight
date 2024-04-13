@@ -16,7 +16,7 @@ export default function PrivateRoute() {
     //     "Authorization":auth?.token //first condition of auth will be checked
     //   }
     // })
-       const res = await axios.get("/api/v1/auth/user-auth")
+       const res = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/user-auth`)
       if (res.data.ok) {
         setOk(true);
       } else {

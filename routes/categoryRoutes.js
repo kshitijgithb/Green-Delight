@@ -1,6 +1,6 @@
 import express from "express";
 import { isAdmin, requireSignIn } from "../middleware/authmiddleware.js";
-import { categoryControlller, createCategoryController, deleteCategoryCOntroller, singleCategoryController, updateCategoryController } from "../controller/categoryController.js";
+import { categoryControlller, createCategoryController, deleteCategoryCOntroller, singleCategoryController, singleCategoryControllerbyid, updateCategoryController } from "../controller/categoryController.js";
 
 const router = express.Router();
 
@@ -26,6 +26,7 @@ router.get("/get-category", categoryControlller);
 
 //single category
 router.get("/single-category/:slug", singleCategoryController);
+router.get("/single-category-byid/:id", singleCategoryControllerbyid);
 
 
 //delete category
