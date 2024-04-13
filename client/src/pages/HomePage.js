@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 const HomePage = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
@@ -134,13 +135,13 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 offset-1">
           <h1 className="text-center">All Products</h1>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
                 <img
-                  src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                  src={`/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
@@ -149,9 +150,16 @@ const HomePage = () => {
                   <p className="card-text">
                     {p.description.substring(0, 30)}...
                   </p>
-                  <p className="card-text"> ₹ {p.price}</p>
-                  <button className="btn btn-primary ms-1">More Details</button>
-                  <button className="btn btn-secondary ms-1">ADD TO CART</button>
+                  <p className="card-text"> $ {p.price}</p>
+                  <button
+                    className="btn btn-primary ms-1"
+                    onClick={() => navigate(`/product/${p.slug}`)}
+                  >
+                    More Details
+                  </button>
+                  <button className="btn btn-secondary ms-1">
+                    ADD TO CART
+                  </button>
                 </div>
               </div>
             ))}
