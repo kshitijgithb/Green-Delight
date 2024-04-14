@@ -37,7 +37,7 @@ const Footer = () => {
                     <form>
                         <input type="email" name="email" className="text-input contact-input" placeholder="Your email address" />
                         <textarea rows="4" name="message" className="text-input contact-input" placeholder="Your message"></textarea>
-                        <button type="submit" className="btn btn-primary">Send</button>
+                        <button type="submit" className="btn1 btn-primary">Send</button>
                     </form>
                 </div>
             </div>
