@@ -25,7 +25,7 @@ const UpdateProduct = () => {
     const getSingleProduct = async () => {
         try {
             const { data } = await axios.get(
-                `/api/v1/product/get-product/${params.slug}`
+                `${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`
             );
             setName(data.product.name);
             setId(data.product._id);

@@ -50,7 +50,7 @@ const CategoryProduct = () => {
                     <p className="card-text"> ₹ {p.price}</p>
                     <button
                       className="btn btn-primary ms-1 w-40"
-                      onClick={() => navigate(`${process.env.REACT_APP_API}/product/${p.slug}`)}
+                      onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
                     </button>

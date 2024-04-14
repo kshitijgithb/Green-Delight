@@ -74,7 +74,7 @@ const CreateCategory = () => {
     try {
       const delcat={}
       const { data } = await axios.delete(
-        `/api/v1/category/delete-category/${pId}`
+        `${process.env.REACT_APP_API}/api/v1/category/delete-category/${pId}`
       );
       if (data.success) {
 
