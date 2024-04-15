@@ -27,6 +27,7 @@ import Search from "./pages/Search";
 import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
+import AdminOrders from "./pages/Admin/AdminOrders";
 
   // import { ToastContainer } from 'react-toastify';
   // import 'react-toastify/dist/ReactToastify.css';
@@ -46,15 +47,15 @@ function App() {
           <Route path="user/orders" element={<Orders />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>
-          <Route path="/dashboard" element={<AdminRoute />}>
+         <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-product" element={<CreateProduct />} />
           <Route path="admin/product/:slug" element={<UpdateProduct />} />
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
+          <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
- 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
           <Route path="/forgot-password" element={<ForgotPasssword />} />
