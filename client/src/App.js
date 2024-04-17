@@ -5,6 +5,8 @@ import About from "./pages/About";
 // import Policy from "./pages/policy";
 
 // import Contact from "./pages/Contact";
+// import '@fortawesome/fontawesome-free/css/all.css';
+
 import Policy from "./pages/Policy";
 import Pagenotfound from "./pages/Pagenotfound";
 import Contact from "./pages/Contact";

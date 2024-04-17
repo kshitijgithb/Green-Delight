@@ -22,10 +22,10 @@ const CartPage = () => {
       cart?.map((item) => {
         total = total + item.price;
       });
-      return total.toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
-      });
+      return  total.toLocaleString("en-IN", {
+      style: "currency",
+      currency: "INR",
+    });
     } catch (error) {
       console.log(error);
     }
@@ -94,11 +94,11 @@ const CartPage = () => {
         </div>
         <div className="row">
           <div className="col-md-8">
-            {cart?.map((p) => (
-              <div className="row mb-2 p-3 card flex-row" key={p._id}>
+            {cart?.map((p,index) => (
+              <div className="row mb-2 p-3 card flex-row" key={index}>
                 <div className="col-md-4">
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                     width="100px"

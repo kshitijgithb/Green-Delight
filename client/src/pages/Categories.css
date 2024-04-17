@@ -1,0 +1,22 @@
+/* Categories.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Add background-color transition */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    
+    /* Change background color on hover */
+}
+.card1:hover {
+    background-color: #c96e6e;
+}
+.cat-btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}

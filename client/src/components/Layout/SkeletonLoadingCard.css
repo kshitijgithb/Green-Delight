@@ -1,0 +1,27 @@
+/* SkeletonLoadingCard.css */
+
+@keyframes blink {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.skeleton-loading-card {
+    animation: blink 1s infinite;
+}
+
+.skeleton-loading-img,
+.skeleton-loading-text,
+.skeleton-loading-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Transparent background color */
+    animation: blink 1s infinite;
+}
