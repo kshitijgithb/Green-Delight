@@ -5,9 +5,10 @@ const AdminMenu = () => {
   return (
     <div className="text-center">
       <div className="list-group dashboard-menu">
-        <h4 style={{ backgroundColor: "black", color: "white", padding: "10px 0" }}>
+        <NavLink to="/dashboard/admin"  style={{textDecoration: 'none'}} ><h4 style={{ backgroundColor: "black", color: "white", padding: "10px 0" }}>
           Admin Panel
         </h4>
+         </NavLink>
         <NavLink
           to="/dashboard/admin/create-category"
           className="list-group-item list-group-item-action"
