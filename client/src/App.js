@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+// import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 // import Contact from "./pages/Contact";
 // import Policy from "./pages/policy";
@@ -30,6 +30,8 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
+import Product from "./pages/Product";
+import Home from "./pages/Home";
 
   // import { ToastContainer } from 'react-toastify';
   // import 'react-toastify/dist/ReactToastify.css';
@@ -38,7 +40,9 @@ function App() {
   return (
     <>
       <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Product" element={<Product />} />
+
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/categories" element={<Categories />} />
          <Route path="/cart" element={<CartPage />} />

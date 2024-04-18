@@ -12,7 +12,7 @@ import { useCart } from "../context/cart";
 // import 'react-toastify/dist/ReactToastify.css';
 import toast from "react-hot-toast";
 
-const HomePage = () => {
+const Product = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -216,4 +216,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default Product;
