@@ -139,7 +139,7 @@ const Product = () => {
                             ))}
                         </Radio.Group>
                     </div>
-                    <div className="d-flex flex-column">
+                    <div className="d-flex flex-column mt-4">
                         <button
                             className="btn btn-danger"
                             onClick={() => window.location.reload()}
@@ -156,7 +156,7 @@ const Product = () => {
                             <div className="col" key={p._id}>
                                 <div className="card custom-card" style={{ backgroundColor: "#f0f0f0", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>
                                     <img
-                                        src={`/api/v1/product/product-photo/${p._id}`}
+                                        src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
                                         style={{ height: "200px" }} // Fixed image height
