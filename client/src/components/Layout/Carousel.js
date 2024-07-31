@@ -1,4 +1,8 @@
 import React from 'react';
+import organic from '../assets/organic.avif';
+import apple from '../assets/apple.avif';
+import vegetable from '../assets/vegetable.avif';
+
 export default function Carousel() {
   return (
     <div>
@@ -10,29 +14,46 @@ export default function Carousel() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img style={{
-              "filter": "brightness(80%)",
-              "maxHeight": "500px", "objectFit": "cover"
-            }} src="https://source.unsplash.com/random/300×300?vegetables" className="d-block w-100" alt="..." />
+            <img
+              style={{
+                filter: "brightness(80%)",
+                maxHeight: "500px",
+                objectFit: "cover"
+              }}
+              src={organic}
+              className="d-block w-100"
+              alt="Vegetables"
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Try Premium range of Organic Products</h5>
-
             </div>
           </div>
           <div className="carousel-item">
-            <img src="https://source.unsplash.com/random/300×300?fruits" style={{
-              "filter": "brightness(80%)",
-              "maxHeight": "500px", "objectFit": "cover"
-            }} className="d-block w-100" alt="..." />
+            <img
+              src={apple}
+              style={{
+                filter: "brightness(80%)",
+                maxHeight: "500px",
+                objectFit: "cover"
+              }}
+              className="d-block w-100"
+              alt="Fruits"
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Buy Organic and Fresh Products Online</h5>
             </div>
           </div>
           <div className="carousel-item">
-            <img style={{
-              "filter": "brightness(80%)",
-              "maxHeight": "500px", "objectFit": "cover"
-            }} src="https://source.unsplash.com/random/300×300?rice" className="d-block w-100" alt="..." />
+            <img
+              style={{
+                filter: "brightness(80%)",
+                maxHeight: "500px",
+                objectFit: "cover"
+              }}
+              src={vegetable}
+              className="d-block w-100"
+              alt="Rice"
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Connect with your Trustable Farmer</h5>
             </div>
@@ -48,5 +69,5 @@ export default function Carousel() {
         </button>
       </div>
     </div>
-  )
+  );
 }
